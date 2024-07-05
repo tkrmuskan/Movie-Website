@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lemon&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Movie</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <h1>Movie Flix</h1>
+        </div>
+        <nav class="navBar">
+          <div class="open-btn" id="open">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="nav-items">
+            <ul class="list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#movies">Movies</a></li>
+              <li><a href="#tv-series">TV Series</a></li>
+              <li><a href="#animated-movies">Animated Movies</a></li>
+              <li><a href="#my-list">My List</a></li>
+              <div class="close-btn" id="close">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </ul>
+            <ul class="user">
+              <li><i class="fa-solid fa-magnifying-glass" id="searchIcon"></i></li>
+              <li><i class="fa-solid fa-bell" id="bellIcon"></i>
+              </li>
+              <li><i class="fa-solid fa-user" id="userIcon"></i></li>
+            </ul>
+
+            <div class="popup" id="searchPopup">
+              <div class="form-box">
+                <span class="close-btn" id="closeSearchPopup">&times;</span>
+                <header>
+                  <div class="search-container">
+                    <h1 id="title">Search Movie</h1>
+                  </div>
+                </header>
+                <form id="searchForm">
+                  <input
+                    type="text"
+                    placeholder="Enter Movie Name"
+                    class="inputBox"
+                  />
+                  <input type="submit" value="Search" class="searchBtn" />
+                </form>
+              </div>
+            </div>
+
+            <div class="popup" id="bellPopup">
+              <div class="notification-box">
+                <span class="close-btn" id="closeBellPopup">&times;</span>
+                <header>
+                  <div class="notification-container">
+                    <h1 id="title">Notifications</h1>
+                  </div>
+                </header>
+                <div class="notification-content">
+                  <p>1. Enjoy exclusive offers on movie bookings:</p>
+                  <p>2. Get 50% off on your first booking!</p>
+                  <p>3. Buy one get one free on weekends.</p>
+                  <p>4. Special discounts for students and seniors.</p>
+                  <p>5. Earn reward points with every booking.</p>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="popup" id="loginPopup">
+              <div class="form-box">
+                <span class="close-btn" id="closeLoginPopup">&times;</span>
+                <header>
+                  <h1 id="title">Login</h1>
+                </header>
+                <form action="">
+                  <input type="text" placeholder="Name" id="nameField" />
+                  <input type="email" placeholder="Username or Email address" />
+                  <input type="password" placeholder="Password" />
+                  <a href="">Forgot Password?</a>
+                  <input type="button" value="Login" id="signinBtn" />
+                  <p class="signup">
+                    Not a member?<a href="#" id="signupBtn">Sign Up?</a>
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <div class="popup" id="signupPopup">
+              <div class="form-box">
+                <span class="close-btn" id="closeSignupPopup">&times;</span>
+                <header>
+                  <h1 id="title">Sign Up</h1>
+                </header>
+                <form action="">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    id="signupNameField"
+                  />
+                  <input type="email" placeholder="Enter Email" />
+                  <input type="password" placeholder="Enter Password" />
+                  <input type="password" placeholder="Confirm Password" />
+                  <div class="checkbox">
+                    <input type="checkbox" id="termsCheckbox" />
+                    <label for="termsCheckbox"
+                      >By continuing, I agree to the terms of use and privacy
+                      policy.</label
+                    >
+                  </div>
+                  <input
+                    type="submit"
+                    value="Create Account"
+                    id="createAccountBtn"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="home" class="section">
+        <div class="bg"></div>
+      </div>
+    </div>
+    
+
+    <section class="about-section">
+      <div class="con">
+        <h2>About</h2>
+        <p>
+          Welcome to Movie Flix, your ultimate destination for all things movies
+          and TV shows. At Movie Flix, we bring you the latest and greatest in
+          the world of cinema, from blockbuster hits to indie gems, and
+          everything in between.
+        </p>
+        <p>
+          Our mission is to keep you informed and entertained with comprehensive
+          movie reviews, trailers, news, and in-depth features on your favorite
+          films and series. Whether you're a casual viewer or a hardcore
+          cinephile, Movie Flix has something for everyone.
+        </p>
+        <p>
+          Browse through our extensive collection of movies and TV shows, create
+          your personalized watchlist, and never miss a new release again. Join
+          our community of movie lovers and stay updated with the latest trends,
+          ratings, and recommendations.
+        </p>
+        <button>More</button>
+      </div>
+    </section>
+
+    <!-- <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-house"></i>
+        <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+        <i class="left-menu-icon fa-solid fa-user"></i>
+        <i class="left-menu-icon fa-regular fa-bookmark"></i>
+        <i class="left-menu-icon fa-solid fa-tv"></i>
+        <i class="left-menu-icon fa-solid fa-hourglass"></i>
+        <i class="left-menu-icon fa-solid fa-cart-shopping"></i>
+    </div> -->
+
+
+    <!-- new releases -->
+    <div class="slider-container">
+      <div class="slider-content">
+        <h1>New Releases</h1>
+      </div>
+      <div class="owl-container">
+        <div class="owl-carousel owl-theme">
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/spider.svg" alt="" />
+              <div class="img-title">
+                <h4>8.3</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Spider-Man No Way Home</h3>
+              <p>Action, Adventure, Fantasy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/blackphone.svg" alt="" />
+              <div class="img-title">
+                <h4>7.0</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>The Black Phone</h3>
+              <p>Horror, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/jurassic.svg" alt="" />
+              <div class="img-title">
+                <h4>6.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Jurassic World Dominion</h3>
+              <p>Action, Adventure, Sci-Fi</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/minions.svg" alt="" />
+              <div class="img-title">
+                <h4>7.8</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Minions: The Rise of Gru</h3>
+              <p>Animation, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/irish.svg" alt="" />
+              <div class="img-title">
+                <h4>7.8</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>The Irıshman</h3>
+              <p>Biography, Crime, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/matrix.svg" alt="" />
+              <div class="img-title">
+                <h4>5.7</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Matrix Resurrection</h3>
+              <p>Action, Sci-Fi</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/hustle.svg" alt="" />
+              <div class="img-title">
+                <h4>7.3</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Hustle</h3>
+              <p>Comedy, Drama, Sport</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/rebecca.svg" alt="" />
+              <div class="img-title">
+                <h4>8.1</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Rebecca</h3>
+              <p>Drama, Mystery, Film-noir</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/joker.svg" alt="" />
+              <div class="img-title">
+                <h4>8.4</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Joker</h3>
+              <p>Crime, Drama, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/extraction.svg" alt="" />
+              <div class="img-title">
+                <h4>6.7</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Extraction</h3>
+              <p>Action, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/anna.svg" alt="" />
+              <div class="img-title">
+                <h4>6.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Anna</h3>
+              <p>Action, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/movies/strange.svg" alt="" />
+              <div class="img-title">
+                <h4>6.9</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Doctor Strange</h3>
+              <p>Action, Adventure, Fantasy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- movies -->
+    <div id="movies" class="movies">
+      <div class="movies-title">
+        <h1>Movies</h1>
+      </div>
+      <div class="movies-ctg">
+        <div class="ctg-1">
+          <button class="btn">All</button>
+          <button class="btn">Action</button>
+          <button class="btn">Adventure</button>
+          <button class="btn">Biography</button>
+          <button class="btn">Crime</button>
+          <button class="btn">Comedy</button>
+          <button class="btn">Drama</button>
+          <button class="btn">Fantasy</button>
+          <button class="btn">Historical</button>
+          <button class="btn">Horror</button>
+          <button class="btn">Musical</button>
+          <button class="btn">Sci-Fi</button>
+          <button class="btn">Sport</button>
+          <button class="btn">Thriller</button>
+          <button class="btn">Popular</button>
+        </div>
+      </div>
+
+      <div class="movies-card">
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/blackout.svg" alt="" />
+            <div class="img-title">
+              <h4>3.8</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Blackout</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/prey.svg" alt="" />
+            <div class="img-title">
+              <h4>7.2</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Prey</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/john.svg" alt="" />
+            <div class="img-title">
+              <h4>7.4</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>John Wick: Chapter 3</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/sonic.svg" alt="" />
+            <div class="img-title">
+              <h4>6.5</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Sonic the Hedgehog 2</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/america.svg" alt="" />
+            <div class="img-title">
+              <h4>8.3</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Once Upon Time in America</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/resident.svg" alt="" />
+            <div class="img-title">
+              <h4>5.2</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Resident Evil</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/narvik.svg" alt="" />
+            <div class="img-title">
+              <h4>6.7</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Narvik: Hitler's First Defeat</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/venom.svg" alt="" />
+            <div class="img-title">
+              <h4>5.9</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Venom: Let There Be Carnage</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/tenet.svg" alt="" />
+            <div class="img-title">
+              <h4>7.3</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Tenet</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/godfather.svg" alt="" />
+            <div class="img-title">
+              <h4>9.2</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>The Godfather</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/sheershah.svg" alt="" />
+            <div class="img-title">
+              <h4>8.4</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Shershaah</h3>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card-img">
+            <img src="../img/movies/eternals.svg" alt="" />
+            <div class="img-title">
+              <h4>6.3</h4>
+              <p>IMDb</p>
+            </div>
+          </div>
+          <div class="card-title">
+            <h3>Eternals</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- series -->
+
+    <div id="tv-series" class="slider-container">
+      <div class="slider-content">
+        <h1>TV Series</h1>
+      </div>
+      <div class="owl-container">
+        <div class="owl-carousel owl-theme">
+          <div class="cards">
+            <div class="card-img">
+              <a href="breaking-bad.html"
+                ><img src="../img/tv/breaking-bad.svg" alt=""
+              /></a>
+              <div class="img-title">
+                <h4>9.5</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Breaking Bad</h3>
+              <p>Crime, Drama, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <a href="got.html"><img src="../img/tv/got.svg" alt="" /></a>
+              <div class="img-title">
+                <h4>9.2</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Game of Thrones</h3>
+              <p>Action, Adventure, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <a href="himym.html"><img src="../img/tv/himym.svg" alt="" /></a>
+              <div class="img-title">
+                <h4>8.3</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>How I Met Your Mother</h3>
+              <p>Comedy, Romance</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <a href="friends.html"
+                ><img src="../img/tv/friends.svg" alt=""
+              /></a>
+              <div class="img-title">
+                <h4>8.2</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Friends</h3>
+              <p>Comedy, Romance</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/wednesday.svg" alt="" />
+              <div class="img-title">
+                <h4>8.2</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Wednesday</h3>
+              <p>Comedy, Drama, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/robot.svg" alt="" />
+              <div class="img-title">
+                <h4>8.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Mr. Robot</h3>
+              <p>Crime, Drama, Thriller</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/witcher.svg" alt="" />
+              <div class="img-title">
+                <h4>8.1</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Witcher</h3>
+              <p>Action, Thriller, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/narcos.svg" alt="" />
+              <div class="img-title">
+                <h4>8.1</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Narcos</h3>
+              <p>Crime, Drama, Biography</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/bcs.svg" alt="" />
+              <div class="img-title">
+                <h4>8.9</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Better Call Saul</h3>
+              <p>Crime, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/tv/dark.svg" alt="" />
+              <div class="img-title">
+                <h4>8.7</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Dark</h3>
+              <p>Crime, Drama, Mystery</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- animated movies -->
+
+    <div id="animated-movies" class="slider-container">
+      <div class="slider-content">
+        <h1>Animated Movies</h1>
+      </div>
+      <div class="owl-container">
+        <div class="owl-carousel owl-theme">
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/addams.svg" alt="" />
+              <div class="img-title">
+                <h4>5.8</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>The Addams Family</h3>
+              <p>Animation, Family, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/dragon.svg" alt="" />
+              <div class="img-title">
+                <h4>8.7</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>How To Train Your Dragon</h3>
+              <p>Animation, Action, Adventure</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/encanto.svg" alt="" />
+              <div class="img-title">
+                <h4>7.2</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Encanto</h3>
+              <p>Animation, Family, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/incredibles.svg" alt="" />
+              <div class="img-title">
+                <h4>7.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Incredibles 2</h3>
+              <p>Animation, Adventure, Action</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/lion.svg" alt="" />
+              <div class="img-title">
+                <h4>6.8</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Lion King</h3>
+              <p>Animation, Adventure, Drama</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/rons.svg" alt="" />
+              <div class="img-title">
+                <h4>7.0</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Ron's Gone Wrong</h3>
+              <p>Animation, Adventure, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/scoob.svg" alt="" />
+              <div class="img-title">
+                <h4>5.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Scoob!</h3>
+              <p>Animation, Adventure, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/seabeast.svg" alt="" />
+              <div class="img-title">
+                <h4>7.1</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>The Sea Beast</h3>
+              <p>Animation, Family, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/wendell.svg" alt="" />
+              <div class="img-title">
+                <h4>6.4</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>Wendell & Wild</h3>
+              <p>Animation, Family, Comedy</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card-img">
+              <img src="../img/animated/mitchells.svg" alt="" />
+              <div class="img-title">
+                <h4>7.6</h4>
+                <p>IMDb</p>
+              </div>
+            </div>
+            <div class="card-title">
+              <h3>The Mitchells vs The Machines</h3>
+              <p>Animation, Adventure, Comedy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="my-list" class="subscribe">
+      <div class="subs-content">
+        <h3>
+          Subscribe to the newsletter and be the first to know about new
+          releases of your favourite TV series and movies
+        </h3>
+      </div>
+      <div class="subs-btn">
+        <input type="email" class="email" placeholder="Your email address..." />
+        <input type="button" value="Subscribe now" class="input-btn" />
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div>
+        <h4>Movies</h4>
+        <h4>TV Series</h4>
+        <h4>Animated Movies</h4>
+      </div>
+      <div>
+        <h4>Privacy Policy</h4>
+        <h4>Cookie Policy</h4>
+        <h4>Terms of Use</h4>
+      </div>
+      <div>
+        <h4>Help Center</h4>
+        <h4>Support</h4>
+        <h4>FAQ</h4>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+      integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>
